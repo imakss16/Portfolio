@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="tut2.css">
+    <script src="https://kit.fontawesome.com/7f963cb449.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <nav>
+            <img src="" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I'm <span>Akash</span><br> Mitra...</h1>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+               <!--  <div class="about-col-1">
+                    <img src="">
+                </div> -->
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a passionate web developer skilled in HTML, CSS, JavaScript. With a focus on creating seamless and engaging digital experiences, I integrate back-end technologies like SQL and MongoDB for robust functionality. Committed to innovation and continuous learning, I thrive on delivering high-quality solutions that exceed expectations.</p>
+
+                    <div class="tab-titles">
+                        <p class="tag-l active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tag-l" onclick="opentab('Education')">Education </p>
+                        <p class="tag-l" onclick="opentab('Projects')">Projects </p>
+                    </div>
+                    <div class="tab-contents active-tag" id="Skills">
+                        <ul>
+                            <li>
+                                <span>UI/UX</span><br>Designing Web Inetrfaces
+                            </li>
+                            <li>
+                                <span>Web Development</span><br>Website development
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li>
+                                <span>2018-2022</span><br>B.Tech in Electrical Engineering <br>8.57 CGPA
+                            </li>
+                            <li>
+                                <span>2017-2018</span><br>Higher Secondary Education <br> 80%
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Projects">
+                        <ul>
+                            <li>
+                                <span>project heading 1</span><br>NA
+                            </li>
+                            <li>
+                                <span>project heading 2</span><br>NA
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- .......services....... -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>UI/UX Design</h2><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam beatae molestiae eveniet ullam explicabo, hic numquam nostrum laudantium tempore exercitationem. Commodi qui dolore, dignissimos autem illo blanditiis animi consequuntur quis.</p>
+                <a href="#">Learn more</a>
+                </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Front End Design</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam alias nihil porro repellendus eum ipsa quia eaque facere, vero aliquam velit ipsam earum optio asperiores temporibus perspiciatis a magnam repudiandae.</p>
+                <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Back End Development</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam alias nihil porro repellendus eum ipsa quia eaque facere, vero aliquam velit ipsam earum optio asperiores temporibus perspiciatis a magnam repudiandae.</p>
+                    <a href="#">Learn more</a>
+                    </div>
+            </div>
+           
+            </div>
+        </div>
+    </div>
+    <!-- portfolio -->
+    <div class="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work-2.png">
+                    <div class="layer">
+                        <h3>Music Website</h3>
+                        <p>Tune into the rhythm of the world with our music listening website, where every click unlocks a symphony of sounds.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-3.png">
+                    <div class="layer">
+                    <h3>Shopping Websites</h3>
+                    <p>Embark on a shopping adventure like no other. Explore, indulge, and discover your next must-have on our premier shopping website.</p>
+                </div>
+                </div>
+                <div class="work">
+                    <img src="preview.png">
+                    <div class="layer">
+                    <h3>Travel Websites</h3>
+                    <p>Embark on Adventures, Where Dreams Take Flight!</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+     <script>
+         var tablinks = document.getElementsByClassName("tag-l");
+         var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tag");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tag")
+        }
+
+     </script>
+</body>
+</html>
